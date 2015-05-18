@@ -5,7 +5,8 @@ EXPAND_BUTTON = require('./expand_button');
 
 
 var style = {
-	display: 'inline-block'
+	display: 'inline-block',
+	flex: .1
 };
 
 var TOP_LEFT_BAR = 

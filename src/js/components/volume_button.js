@@ -15,7 +15,6 @@ var default_style_button = {
 }
 
 
-
 function volume_visible_watcher(){
 	return {
 		volume_visible: UxStore.volume_visible()

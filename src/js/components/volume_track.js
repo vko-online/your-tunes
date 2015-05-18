@@ -1,6 +1,7 @@
 /*** @jsx React.DOM */
 var React = require('react'),
 UxStore = require('../stores/ux_store'),
+TuneActions = require('../actions/tune_actions'),
 UxActions = require('../actions/ux_actions'),
 UxWatchMixin = require('../mixins/ux_watch_mixin'),
 merge = require('lodash').extend;
@@ -11,6 +12,8 @@ var style = {
 	left: -27,
 	width: 70
 };
+
+//TODO: maybe we should not save state of volume bar visibility?
 function volume_track_watcher(){
 	return {
 		volume_value: UxStore.volume_value(),
@@ -34,8 +37,9 @@ React.createClass({
 			this.timeout = null;
 		}
 		
-		var input_val = parseInt(event.target.value);
+		var input_val = parseInt(event.target.value) / 10;
 		UxActions.set_volume(input_val);
+		TuneActions.volume(input_val);
 	 	this.timeout = setTimeout(function() {
 			UxActions.hide_volume();
 			clearTimeout(this.timeout);

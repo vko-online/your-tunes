@@ -4,7 +4,7 @@ DROPDOWN_BUTTON = require('./dropdown_button');
 
 var style = {
 	display: 'inline-block',
-	float: 'right'
+	flex: .1
 };
 
 var TOP_RIGHT_BAR = 

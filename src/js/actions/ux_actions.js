@@ -36,6 +36,26 @@ var UxActions = {
 			actionType: AppConstants.VOLUME_HIDE
 		});
 	},
+	show_controls: function(){
+		AppDispatcher.handleViewAction({
+			actionType: AppConstants.UX_CONTROLS_SHOW
+		});
+	},
+	hide_controls: function(){
+		AppDispatcher.handleViewAction({
+			actionType: AppConstants.UX_CONTROLS_HIDE
+		});
+	},
+	show_collapsed: function(){
+		AppDispatcher.handleViewAction({
+			actionType: AppConstants.SIZE_COLLAPSE_SHOW
+		});
+	},
+	hide_collapsed: function(){
+		AppDispatcher.handleViewAction({
+			actionType: AppConstants.SIZE_COLLAPSE_HIDE
+		});
+	}
 	//other actions
 };
 
